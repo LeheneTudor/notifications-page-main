@@ -1,0 +1,155 @@
+
+@font-face {
+    font-family: 'jakarta-medium';
+    src: url('../assets/fonts/static/PlusJakartaSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'jakarta-extra-bold';
+    src: url('../assets/fonts/static/PlusJakartaSans-ExtraBold.ttf');
+}
+
+@font-face {
+    font-family: 'jakarta-variable';
+    src: url('../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf');
+}
+
+:root {
+    --mobile-width: 375px;
+    --desktop-width: 1440px;
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-blue: hsl(210, 60%, 98%);
+    --light-grayish-blue-1: hsl(211, 68%, 94%);
+    --light-grayish-blue-2: hsl(205, 33%, 90%);
+    --grayish-blue: hsl(219, 14%, 63%);
+    --dark-grayish-blue: hsl(219, 12%, 42%);
+    --very-dark-blue: hsl(224, 21%, 14%);
+    --font-size: 16px;
+    --font-weight-small: 500;
+    --font-weight-large: 800;
+    --font-jakarta-medium: 'jakarta-medium', 'Courier New', Courier, monospace;
+    --font-jakarta-extra-bold: 'jakarta-extra-bold', 'Courier New', Courier, monospace;
+    --font-jakarta-variable: 'jakarta-variable', 'Courier New', Courier, monospace;
+}
+
+html {
+    font-size: var(--font-size);
+    box-sizing: border-box;
+    font-family: var(--font-jakarta-variable)
+}
+
+.notifications-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
+}
+
+.notifications-header .notifications-number-area {
+    font-family: 'jakarta-extra-bold', 'Courier New', Courier, monospace;
+    color: var(--very-dark-blue);
+}
+
+.notifications-header .notifications-number {
+    display: inline-block;
+    border: 1px solid var(--very-dark-blue);
+    padding: 2px 8px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    color: var(--white);
+    margin-left: 5px;
+}
+
+.notifications-header .notifications-read-all {
+    text-decoration: none;
+    color: var(--dark-grayish-blue);
+}
+
+.user-image img {
+    height: 65px;
+}
+
+.user-name {
+    font-family: 'jakarta-extra-bold';
+    font-weight: var(--font-weight-large);
+}
+
+.user-name:hover {
+    color: var(--blue);
+    cursor: pointer;
+}
+
+.commented-picture {
+    height: 50px;
+    cursor: pointer;
+    margin-top: 1em;
+}
+
+.user-action {
+    margin-left: 5px;
+    color: var(--dark-grayish-blue);
+}
+
+.post-name {
+    margin-right: 5px;
+    font-family: var(--font-jakarta-medium);
+    color: var(--dark-grayish-blue);
+    font-weight: var(--font-weight-large);
+}
+
+.private-message {
+    display: block;
+    border: 1px solid var(--light-grayish-blue-2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: var(--grayish-blue);
+}
+
+.group-name {
+    font-family: var(--font-jakarta-medium);
+    color: var(--blue);
+    font-weight: var(--font-weight-large);
+}
+
+.group-name:hover {
+    cursor: pointer;
+}
+
+.not-read-dot {
+    display: inline-block;
+    background-color: var(--red);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px var(--red);
+    margin-left: 5px;
+}
+
+.notification-time {
+    color: var(--grayish-blue);
+}
+
+.notifications-block {
+    display: flex;
+    gap: 15px;
+    margin: 0 30px;
+    padding: 20px 0 20px 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.notification-info {
+    width: 100%;
+    margin-top: -10px;
+}
+
+.notification-block--read {
+    background-color: var(--light-grayish-blue-1);
+}
+
+.notification-paragraph {
+    display: flex;
+    justify-content: space-between;
+}
